@@ -62,6 +62,7 @@ return [
             'username' => env('DB_USERNAME', 'd'),
             'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
+            'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'schema' => 'public',
             'sslmode' => 'prefer',
