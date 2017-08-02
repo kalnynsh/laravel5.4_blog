@@ -15,13 +15,10 @@ use App\Task;
 
 Route::get('/', function () {
     
-    $tasks = [
-        'Go to the store',
-        'Finish my lesson',
-        'Clean the house',
-    ];
+    $tasks = DB::table('tasks')->get();
     
-    return view('welcome', compact('tasks'));  
+    return view('welcome', compact('tasks'));
+     
     // compact('name') EQUAL ['name' => $name]
     
     // return view('welcome')->with('name', 'Dmitry');
