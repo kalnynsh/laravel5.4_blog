@@ -14,7 +14,9 @@ use App\Task;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        'name' => 'Dmitry',
+    ]);
 });
 
 Route::get('/tasks', function() {
