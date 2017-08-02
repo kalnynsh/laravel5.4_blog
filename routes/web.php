@@ -14,9 +14,17 @@ use App\Task;
 
 
 Route::get('/', function () {
-    return view('welcome', [
-        'name' => 'Dmitry',
-    ]);
+    
+    $tasks = [
+        'Go to the store',
+        'Finish my lesson',
+        'Clean the house',
+    ];
+    
+    return view('welcome', compact('tasks'));  
+    // compact('name') EQUAL ['name' => $name]
+    
+    // return view('welcome')->with('name', 'Dmitry');
 });
 
 Route::get('/tasks', function() {
