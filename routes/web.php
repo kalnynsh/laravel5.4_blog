@@ -21,15 +21,17 @@ Route::get('/', function () {
 
 });
 
-Route::get('/tasks', function() {
-    
-    // $tasks = DB::table('tasks')->latest()->get();
+Route::get('/tasks', 'TasksController@index');
 
-    $tasks = Task::all();  // Обращаемся к модели Task
-
-    return view('tasks.index', compact('tasks'));   
-
-});
+//Route::get('/tasks', function() {
+//    
+//    // $tasks = DB::table('tasks')->latest()->get();
+//
+//    $tasks = Task::all();  // Обращаемся к модели Task с запросом получить все
+//
+//    return view('tasks.index', compact('tasks'));   
+//
+//});
 
 Route::get('/tasks/{task}', function($id) {
 
