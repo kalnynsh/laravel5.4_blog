@@ -33,16 +33,18 @@ Route::get('/tasks', 'TasksController@index');
 //
 //});
 
-Route::get('/tasks/{task}', function($id) {
+Route::get('/tasks/{task}', 'TasksController@show');
 
-    // dd($id); // helper dump_var()
-    
-    // $task = DB::table('tasks')->find($id);
-    
-    $task = Task::find($id);
-
-    // Task::incomplete();
-   
-    return view('tasks.show', compact('task'));   // 'tasks/show'
-
-});
+//Route::get('/tasks/{task}', function($id) {
+//
+//    // dd($id); // helper dump_var()
+//    
+//    // $task = DB::table('tasks')->find($id);
+//    
+//    $task = Task::find($id);
+//
+//    // Task::incomplete();
+//   
+//    return view('tasks.show', compact('task'));   // 'tasks/show'
+//
+//});
