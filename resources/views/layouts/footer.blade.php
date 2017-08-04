@@ -1,13 +1,15 @@
-<footer class="text-muted">
-    
-    <div class="container">
+    <footer class="blog-footer">
         
-        <p class="float-right">
+        <p>Blog built for 
+            <a href="http://dev.blog-lv.edu/">
+                dev.blog-lv.edu
+            </a> 
+            by 
+            <a href="https://twitter.com/kalnynsh">
+                @kalnynsh
+            </a>.
+        </p>
+        <p>
             <a href="#">Back to top</a>
         </p>
-        
-        <p>Blog © Bootstrap powered</p>
-        
-    </div>
-    
-</footer>
+    </footer>
