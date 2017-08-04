@@ -23,19 +23,14 @@ class PostsController extends Controller
         return view('posts.create');
     }
     
-    public function store() {
-        
-//        dd(request(['title', 'body']));  // Get all request data
-        
-        // Create a new post using the request data
-        $post = new Post;
-        
-        $post->title = request('title');
-        
-        $post->body = request('body');
-        
-        // Save it to DB
-        $post->save();
+    public function store() {  
+      
+        Post::create([
+            
+            'title' => request('title'),
+            
+            'body' => request('body')
+        ]);
         
         // Redirect to Home page
         return redirect('/');
