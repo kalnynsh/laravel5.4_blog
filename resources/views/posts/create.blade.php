@@ -4,7 +4,7 @@
 
 <div class="col-sm-8 blog-main">
 
-    <h1>Create a Post</h1>
+    <h1>Publish a Post</h1>
 
     <hr>
     
