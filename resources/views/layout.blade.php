@@ -13,9 +13,14 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" 
               integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" 
               crossorigin="anonymous">
-
+        
         <!-- Custom styles for this template -->
         <link href="/css/album.css" rel="stylesheet">
+        
+        <!-- JS-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" 
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" 
+            crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -38,14 +43,8 @@
                 </div>
             </div>
         </div>
-        <div class="navbar navbar-inverse bg-inverse">
-            <div class="container d-flex justify-content-between">
-                <a href="#" class="navbar-brand">Album</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </div>
+
+        @include ('partials.nav')
 
         <section class="jumbotron text-center">
             <div class="container">
