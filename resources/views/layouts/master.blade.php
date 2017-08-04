@@ -21,8 +21,9 @@
 
     <body>        
 
-        @include ('layouts.nav')
+        @include ('layouts.nav') 
         
+        @include ('layouts.header') 
                 
         @yield('content')
                 
