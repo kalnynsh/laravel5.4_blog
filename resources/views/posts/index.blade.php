@@ -8,6 +8,8 @@
 
 @section ('footer')
 
-<p>2017 Lerning Laravel</p>
+    <p>2017 Lerning Laravel</p>
+
+    <script src="/js/file.js"></script>
 
 @endsection
