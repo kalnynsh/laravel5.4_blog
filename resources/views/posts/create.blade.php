@@ -6,12 +6,14 @@
 
     <h1>Create a Post</h1>
 
+    <hr>
+    
     <form>
         
         <div class="form-group">
             
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" placeholder="Title">
             
         </div>
         
