@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        @include ('partials.nav')
+        @include ('layouts.nav')
 
         <section class="jumbotron text-center">
             <div class="container">
