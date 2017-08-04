@@ -13,14 +13,18 @@
         <div class="form-group">
             
             <label for="title">Title:</label>
-            <input type="text" class="form-control" id="title" placeholder="Title">
+            <input type="text" class="form-control" id="title" 
+                   placeholder="Title for Post" name='title'>
             
         </div>
         
         <div class="form-group">
             
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="body">Body</label>
+                        
+            <textarea id="body" name="body" class="form-control">
+                
+            </textarea>
             
         </div>
         
