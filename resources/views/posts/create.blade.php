@@ -28,7 +28,7 @@
             
         </div>
         
-        <button type="submit" class="btn btn-default">Publish</button>
+        <button type="submit" class="btn btn-primary">Publish</button>
         
     </form>
 
