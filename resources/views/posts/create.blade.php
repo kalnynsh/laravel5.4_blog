@@ -8,7 +8,7 @@
 
     <hr>
     
-    <form>
+    <form method="POST" action="/posts">
         
         <div class="form-group">
             
