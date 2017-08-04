@@ -1,3 +1,7 @@
 @extends ('layout')
 
-Lorem  ipsum dolore mind. 
+@section ('content')
+
+    <p>Lorem  ipsum dolore mind.</p> 
+
+@endsection
