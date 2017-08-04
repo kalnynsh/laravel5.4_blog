@@ -39,7 +39,7 @@
                 
         @include('layouts.footer')
         
-         @include('layouts.scripts')
+        @include('layouts.scripts')
 
     </body>
 </html>
