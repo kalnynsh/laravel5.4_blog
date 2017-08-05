@@ -4,7 +4,11 @@
 
 <div class="col-sm-8 blog-main">
     
-    @include('posts.post')
+    @foreach ($posts as $post)
+    
+        @include('posts.post')
+    
+    @endforeach
     
     <nav class="blog-pagination">
         <a class="btn btn-outline-primary" href="#">Older</a>
