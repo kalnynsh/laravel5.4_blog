@@ -30,27 +30,13 @@
             
         </div>
         
-        <button type="submit" class="btn btn-primary">Publish</button>
+        <div class="form-group">
         
-        @if (count($errors))
+            <button type="submit" class="btn btn-primary">Publish</button>
         
-            <div class="form-group">
-
-                <div class="alert alert-warning">
-
-                    <ul>
-                        @foreach ($errors->all() as $error)
-
-                        <li>{{ $error }}</li>
-
-                        @endforeach
-                    </ul>
-
-                </div>
-
-            </div>
+        </div>
         
-        @endif
+        @include('layouts.errors')
         
     </form>
     
