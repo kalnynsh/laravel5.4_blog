@@ -38,9 +38,7 @@
         
         @include('layouts.errors')
         
-    </form>
-    
-
+    </form>  
 
 </div>
 @endsection
