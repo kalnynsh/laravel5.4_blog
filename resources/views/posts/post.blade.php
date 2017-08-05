@@ -2,7 +2,7 @@
 
     <h2 class="blog-post-title">
         
-        <a href="/posts/{{ $post->id }}"
+        <a href="/posts/{{ $post->id }}">
         
             {{ $post->title }}
             
