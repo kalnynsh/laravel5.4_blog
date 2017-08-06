@@ -14,15 +14,25 @@
         
         <div class="comments">
             
-            @foreach ($post->comments as $comment)
+            <ul class="list-group">
             
-                <article>
-                    
-                   {{ $comment->body }} 
-                    
-                </article>
+                @foreach ($post->comments as $comment)
+
+                    <li class="list-group-item">
+                        
+                        <strong>
+                            
+                            {{ $comment->created_at }}
+                            
+                        </strong>
+
+                       {{ $comment->body }} 
+
+                    </li>
+
+                @endforeach
             
-            @endforeach
+            </ul>
             
         </div>
         
