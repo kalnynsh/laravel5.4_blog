@@ -22,7 +22,7 @@
                         
                         <strong>
                             
-                            {{ $comment->created_at }}
+                            {{ $comment->created_at->DiffForHumans() }}
                             
                         </strong>
 
