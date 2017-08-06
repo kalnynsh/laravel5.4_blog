@@ -22,11 +22,11 @@
                         
                         <strong>
                             
-                            {{ $comment->created_at->DiffForHumans() }}
+                            {{ $comment->created_at->DiffForHumans() }}: &nbsp;
                             
                         </strong>
 
-                       {{ $comment->body }} 
+                       {{ $comment->body }}
 
                     </li>
 
