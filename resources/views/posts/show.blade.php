@@ -10,9 +10,11 @@
             {{ $post->body }}
         </p>
 
+        <hr>
+        
         <div class="comments">
             
-            @foreach ($post->comments as comment)
+            @foreach ($post->comments as $comment)
             
                 <article>
                     
