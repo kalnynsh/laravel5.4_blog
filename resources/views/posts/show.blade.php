@@ -51,20 +51,20 @@
                         <textarea name="body" 
                                   placeholder="Your comment here."
                                   class="form-control">
-                       </textarea>
+                        </textarea>
                         
                     </div>
                     
-                    <div class="form-control">
-                        
-                        <button type="submit" class="btn btn-primary">
-                            
-                            Add comment
-                            
-                        </button>  
-                        
-                    </div>
-                    
+                        <div class="form-group">
+
+                            <button type="submit" class="btn btn-primary">
+
+                                Add Comment
+
+                            </button>  
+
+                        </div>               
+                     
                 </form>
                 
             </div>
