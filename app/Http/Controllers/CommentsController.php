@@ -13,18 +13,11 @@ class CommentsController extends Controller
 {
     public function store(Post $post) 
     {
+        $this->validate(request(), ['body']);
+        
         // Add a comment to a post
         
         $post->addComment(request('body'));
-        
-// Move to app\Post        
-//        Comment::create([
-//            
-//            'body' => request('body'),
-//            
-//            'post_id' => $post->id,
-//            
-//        ]);
         
         return back();
         
