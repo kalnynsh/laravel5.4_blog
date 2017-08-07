@@ -52,7 +52,8 @@
                         
                         <textarea name="body" 
                                   placeholder="Your comment here."
-                                  class="form-control">
+                                  class="form-control"
+                                  required="">
                         </textarea>
                         
                     </div>
