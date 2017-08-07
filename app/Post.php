@@ -6,6 +6,7 @@ namespace App;
 
 use App\Comment;
 
+
 class Post extends Model
 {
     protected $fillable = ['title', 'body'];
@@ -20,13 +21,15 @@ class Post extends Model
     public function addComment($body) 
     {
         
-      Comment::create([
-         
-          'body' => $body,
-          
-          'post_id' => $this->id,
-          
-      ]);  
+//      Comment::create([
+//         
+//          'body' => $body,
+//          
+//          'post_id' => $this->id,
+//          
+//      ]);  
+        
+        $this->comments()->create(compact('body'));
         
     }
 }
