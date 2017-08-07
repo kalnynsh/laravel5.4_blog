@@ -36,6 +36,41 @@
             
         </div>
         
+        <hr>
+        
+        {{-- Add a comment --}}
+        
+        <div class="card">
+            
+            <div class="card-block">
+                
+                <form>
+                    
+                    <div class="form-group">
+                        
+                        <textarea name="body" 
+                                  placeholder="Your comment here."
+                                  class="form-control">
+                       </textarea>
+                        
+                    </div>
+                    
+                    <div class="form-control">
+                        
+                        <button type="submit" class="btn btn-primary">
+                            
+                            Add comment
+                            
+                        </button>  
+                        
+                    </div>
+                    
+                </form>
+                
+            </div>
+            
+        </div>
+        
     </div>    
 
 @endsection
