@@ -44,7 +44,7 @@
             
             <div class="card-block">
                 
-                <form>
+                <form method="POST" action="/posts/{{ $post->id }}/comments">
                     
                     <div class="form-group">
                         
