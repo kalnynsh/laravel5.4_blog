@@ -17,10 +17,10 @@ class CreateCommentsTable extends Migration
             
             $table->increments('id');
             
-            $table->integer('post_id');  // Link to post table
+            $table->integer('user_id');  // Link to user table
             
-//            $table->integer('user_id');  // Link to user table
-            
+            $table->integer('post_id');  // Link to post table   
+           
             $table->string('body');
             
             $table->timestamps();
