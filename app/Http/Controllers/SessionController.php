@@ -24,7 +24,7 @@ class SessionController extends Controller
     {
 // Attempt to authenticate the user.
         
-        if (!auth()->attempt(request(['email', 'password']))) {
+        if (! auth()->attempt(request(['email', 'password']))) {
             
             return back()->withErrors([
                 
