@@ -47,11 +47,15 @@ class PostsController extends Controller
         // Validation
         $this->validate(request(), [
             
-            'title' => 'required', // 'required|min:10|max:255' 10 min charecters
+            'title' => 'required|min:3', // 'required|min:10|max:255' 10 min charecters
             'body' => 'required', 
         ]);             
         
-        Post::create(request(['title', 'body']));
+        Post::create([
+            'title' => request('title'), 
+            'body' => request('title'), 
+            'user_id' => auth()->id(),  // 'user_id' => auth()->user()->id
+        ]);
         
         // Redirect to Home page
         return redirect('/');
