@@ -35,16 +35,7 @@ class User extends Authenticatable
     
     public function publish(Post $post) {
         
-        $this->posts()->save($post);
-        
-//        Post::create([
-//            
-//            'title' => request('title'), 
-//            
-//            'body' => request('body'), 
-//            
-//            'user_id' => auth()->id(),  // 'user_id' => auth()->user()->id
-//        ]);
+        $this->posts()->save($post);     
         
     }
 }
