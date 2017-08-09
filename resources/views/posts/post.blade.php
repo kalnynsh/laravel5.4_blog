@@ -12,9 +12,9 @@
 
     <p class="blog-post-meta">
         
-        {{ $post->created_at->toFormattedDateString() }}
+        <a href="#">{{ $post->user->name }}</a> on
         
-        by <a href="#">Kalnynsh D.A.</a>
+        {{ $post->created_at->toFormattedDateString() }}     
         
     </p>
 
