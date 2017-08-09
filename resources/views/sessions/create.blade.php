@@ -6,7 +6,7 @@
         
         <h1>Sign In</h1>
         
-        <form method="POST" action="/sessions">
+        <form method="POST" action="/login">
             
             {{ csrf_field() }}
             
