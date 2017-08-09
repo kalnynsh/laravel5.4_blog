@@ -26,7 +26,7 @@ class SessionController extends Controller
         
         if (!auth()->attempt(request(['email', 'password']))) {
             
-            return back()-withErrors([
+            return back()->withErrors([
                 
                'message' =>  'Please check your credentials '
                 . 'and try again.'
