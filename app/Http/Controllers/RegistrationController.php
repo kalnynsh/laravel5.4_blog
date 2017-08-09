@@ -42,6 +42,7 @@ class RegistrationController extends Controller
 //        \Auth::login();
 //        auth();
 //        \Request::input();
+//          request()->input();        
         
         auth()->login($user);
                 
