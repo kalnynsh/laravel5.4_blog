@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 class SessionController extends Controller
 {
     
+    public function __construct() 
+    {
+        
+        $this->middleware('guest');
+    }
+    
     public function create()
     {
         
