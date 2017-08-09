@@ -4,12 +4,49 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\User;
+
+
 class RegistrationController extends Controller
 {
     public function create() 
     {
        
         return view('session.create');
+        
+    }
+
+    public function store() 
+    {
+       
+        // Validate the form
+        $this->validate(request(), [
+            
+            'name' => 'required',
+            
+            'email' => 'required|email',
+            
+            'password' => 'required',            
+            
+        ]);
+        
+        // Create and save User
+        $user = User::create(request([
+            'name',
+            'email',
+            'password',
+        ]));
+        
+        // Sign new User in.
+        
+//        \Auth::login();
+//        auth();
+//        \Request::input();
+        
+        auth()->login($user);
+                
+        // Redirect to the home page.
+        return redirect()->home();  // redirect('/);
         
     }
 }
