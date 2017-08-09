@@ -53,6 +53,13 @@
                     
             </div>
             
+            <div class="form-group">
+                
+                @include ('layouts.errors')
+                
+            </div>
+            
+            
         </form>
         
     </div>
