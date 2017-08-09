@@ -6,7 +6,7 @@
         
         <h1>Register</h1>
         
-        <form name="registration" method="POST" class="">
+        <form name="registration" method="POST" action="/register">
             
             {{ csrf_field() }}
             
