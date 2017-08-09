@@ -35,28 +35,21 @@ class PostsController extends Controller
         return view('posts.create');
     }
     
-    public function store() {  
-      
-//        Post::create([
-//            
-//            'title' => request('title'),
-//            
-//            'body' => request('body')
-//        ]);
-        
+    public function store() {        
+       
         // Validation
         $this->validate(request(), [
             
             'title' => 'required|min:3', // 'required|min:10|max:255' 10 min charecters
             'body' => 'required', 
-        ]);             
-        
-        Post::create([
-            'title' => request('title'), 
-            'body' => request('body'), 
-            'user_id' => auth()->id(),  // 'user_id' => auth()->user()->id
         ]);
         
+        auth()->user()->publish(
+                
+           new Post(request(['title', 'body']))
+                
+        );
+           
         // Redirect to Home page
         return redirect('/');
     }
