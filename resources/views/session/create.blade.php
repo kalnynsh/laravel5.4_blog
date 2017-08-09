@@ -23,7 +23,7 @@
                     
                 <label for="email">Email:</label>
                     
-                <input type="email" class="form-group"
+                <input type="email" class="form-control"
                            id="email" name="email">
                     
             </div>
@@ -32,8 +32,14 @@
                     
                 <label for="password">Password:</label>
                     
-                <input type="password" class="form-group"
+                <input type="password" class="form-control"
                            id="password" name="password">
+                    
+            </div>
+                
+            <div class="form-group">                    
+                                    
+                <button type="submit" class="btn btn-primary">Register</button>
                     
             </div>
                 
