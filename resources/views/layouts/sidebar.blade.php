@@ -16,7 +16,7 @@
             
                 <li>
                     
-                    <a href="#">{{ $stats['month'] }}</a>
+                    <a href="#">{{ $stats['month'] . ' ' . $stats['year'] }}</a>
                         
                 </li>
                 
