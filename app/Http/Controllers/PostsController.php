@@ -17,8 +17,12 @@ class PostsController extends Controller
     public function index() {     
          
         $posts = Post::latest()
+                
                 ->filter(request(['month', 'year']))
+                
                 ->get();       
+
+// Temporary. 
         
         $archives = Post::selectRaw(
                 "DATE_PART('year', created_at) AS year, "
