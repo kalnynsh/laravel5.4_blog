@@ -16,8 +16,21 @@ class PostsController extends Controller
     
     public function index() {     
          
-//        $posts = Post::orderBy('created_at', 'desc')->get();
-        $posts = Post::latest()->get();
+        $posts = Post::latest();
+        
+        if ($month = request('month')) {
+            
+            $posts->whereMonth('created_at', $month);
+            
+        }
+        
+        if ($year = request('year')) {
+            
+            $posts->whereYear('created_at', $year);
+            
+        }
+        
+        $posts = $posts->get();
         
         $archives = Post::selectRaw(
                 "DATE_PART('year', created_at) AS year, "
@@ -31,8 +44,6 @@ class PostsController extends Controller
                 ->get()
                 
                 ->toArray();
-        
-//        return $archives;
         
         return view('posts.index', compact('posts', 'archives'));
     }
