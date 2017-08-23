@@ -26,13 +26,15 @@ class PostsController extends Controller
                 
                 ->groupBy('year','month')
                 
+                ->orderByRaw('MIN(created_at) DESC')
+                
                 ->get()
                 
                 ->toArray();
         
-        return $archives;
+//        return $archives;
         
-        return view('posts.index', compact('posts'));
+        return view('posts.index', compact('posts', 'archives'));
     }
     
     public function show(Post $post) {
