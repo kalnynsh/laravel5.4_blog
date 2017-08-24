@@ -42,9 +42,20 @@ class PostsController extends Controller
     
     public function show(Post $post) {
         
-//        $post = Post::find($post);
+         $archives = Post::selectRaw(
+                "DATE_PART('year', created_at) AS year, "
+                . "DATE_PART('month', created_at) AS month,"
+                . "COUNT(*) AS published")
+                
+                ->groupBy('year','month')
+                
+                ->orderByRaw('MIN(created_at) DESC')
+                
+                ->get()
+                
+                ->toArray();
         
-        return view('posts.show', compact('post'));
+        return view('posts.show', compact('post', 'archives'));
     }
     
     public function create() {
