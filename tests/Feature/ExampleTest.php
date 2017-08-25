@@ -18,6 +18,10 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/');
 
-        $response->assertStatus(200);
+//        $response->assertStatus(200); // check status OK
+        
+        $value = 'The Blog';
+        
+        $response->assertSee($value);
     }
 }
