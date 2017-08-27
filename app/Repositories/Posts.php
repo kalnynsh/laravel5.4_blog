@@ -4,12 +4,23 @@ namespace App\Repositories;
 
 use App\Post;
 
+use App\Redis;
+
 
 class Posts
 {
-    
-    public function all() 
+    protected $redis;
+
+
+    public function __construct(Redis $redis) 
     {
+            
+        $this->redis = $redis;
+            
+    }       
+        
+    public function all() 
+    {    
         
         // return ALL posts
         
@@ -17,7 +28,6 @@ class Posts
         
         return Post::all();
         
-    }
-    
+    }    
     
 }
