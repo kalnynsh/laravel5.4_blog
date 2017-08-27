@@ -13,7 +13,7 @@
 
 App::bind('App\Billing\Stripe', function() {
 
-    return \App\Billing\Stripe(config('services.stripe.secret'));
+    return new \App\Billing\Stripe(config('services.stripe.secret'));
     
 });
 
