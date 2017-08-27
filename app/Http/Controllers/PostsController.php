@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Post;
 
+use App\Repositories\Posts;
+
+
 class PostsController extends Controller
 {
     public function __construct() {
@@ -14,13 +17,17 @@ class PostsController extends Controller
     }
     
     
-    public function index() {     
+    public function index(Posts $posts) { 
+        
+//        $posts = (new \App\Repositories\Posts)->all();
+        
+        $posts = $posts->all();
          
-        $posts = Post::latest()
-                
-                ->filter(request(['month', 'year']))
-                
-                ->get();        
+//        $posts = Post::latest()
+//                
+//                ->filter(request(['month', 'year']))
+//                
+//                ->get();        
         
         return view('posts.index', compact('posts'));
     }
