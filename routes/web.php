@@ -18,7 +18,9 @@ App::bind('App\Billing\Stripe', function() {
 });
 
 
-$stripe = App::make('App\Billing\Stripe');
+//$stripe = App::make('App\Billing\Stripe');
+
+$stripe = resolve('App\Billing\Stripe');
 
 dd($stripe);        
         
