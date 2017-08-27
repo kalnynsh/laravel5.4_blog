@@ -21,6 +21,8 @@ class PostsController extends Controller
         
 //        $posts = (new \App\Repositories\Posts)->all();
         
+//        dd($posts);  Check of building all dependenses Post $posts, Redis $redis
+        
         $posts = $posts->all();
          
 //        $posts = Post::latest()
