@@ -9,21 +9,7 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
-
-App::singleton('App\Billing\Stripe', function() {
-
-    return new \App\Billing\Stripe(config('services.stripe.secret'));
-    
-});
-
-
-// $stripe = App::make('App\Billing\Stripe');
-// $stripe = app('App\Billing\Stripe');
-
-// $stripe = resolve('App\Billing\Stripe');
-// dd($stripe);        
-        
+*/      
 
 Route::get('/', 'PostsController@index')->name('home');
 
