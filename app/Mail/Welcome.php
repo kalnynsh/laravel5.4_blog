@@ -13,7 +13,7 @@ class Welcome extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $user;
+    public $user;
 
 
 /**
