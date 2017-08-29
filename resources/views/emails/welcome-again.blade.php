@@ -1,19 +1,17 @@
 @component('mail::message')
 # Introduction
 
-The body of your message.
+Thanks so much for registering! 
 
-- one
-- two
-- three
+@component('mail::button', ['url' => 'http://laracasts.com'])
 
-@component('mail::button', ['url' => ''])
-Button Text
+Start Browsing
+
 @endcomponent
 
 @component('mail::panel', ['url' => ''])
 
-Lorem ipsum dolar sit amet.
+Some inspirational quote to go here :)
 
 @endcomponent
 
