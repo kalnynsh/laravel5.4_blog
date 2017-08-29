@@ -3,7 +3,7 @@
 
 Thanks so much for registering! 
 
-@component('mail::button', ['url' => 'http://laracasts.com'])
+@component('mail::button', ['url' => 'https://laracasts.com'])
 
 Start Browsing
 
