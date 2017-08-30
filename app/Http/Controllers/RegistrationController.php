@@ -8,6 +8,9 @@ use App\User;
 
 use App\Mail\Welcome;
 
+use App\Http\Requests\RegistrationRequest;
+
+
 class RegistrationController extends Controller
 {
     public function create() 
@@ -17,20 +20,9 @@ class RegistrationController extends Controller
         
     }
 
-    public function store() 
+    public function store(RegisrationRequest $request) 
     {
-       
-        // Validate the form
-        $this->validate(request(), [
-            
-            'name' => 'required',
-            
-            'email' => 'required|email',
-            
-            'password' => 'required|confirmed',            
-            
-        ]);
-        
+      
         // Create and save User
         $user = User::create(request([
             'name',
