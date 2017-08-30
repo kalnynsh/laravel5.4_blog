@@ -2,6 +2,12 @@
 
 namespace App\Http\Requests;
 
+use App\User;
+
+use App\Mail\Welcome;
+
+use Illuminate\Support\Facades\Mail;
+
 use Illuminate\Foundation\Http\FormRequest;
 
 class RegistrationRequest extends FormRequest
@@ -32,5 +38,21 @@ class RegistrationRequest extends FormRequest
             'password' => 'required|confirmed',            
             
         ];
+    }
+    
+    public function persist() 
+    {
+
+// Create and save User
+        $user = User::create(
+                
+        request(['name','email','password'])
+                
+        );
+        
+        // Sign new User in.       
+        auth()->login($user);
+        
+        \Mail::to($user)->send(new Welcome($user));
     }
 }
