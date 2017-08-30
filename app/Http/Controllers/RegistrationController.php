@@ -8,7 +8,7 @@ use App\User;
 
 use App\Mail\Welcome;
 
-use App\Http\Requests\RegistrationRequest;
+use App\Http\Requests\RegistrationForm;
 
 
 class RegistrationController extends Controller
@@ -20,27 +20,9 @@ class RegistrationController extends Controller
         
     }
 
-    public function store(RegisrationRequest $request) 
-    {
-      
-        // Create and save User
-        $user = User::create(request([
-            'name',
-            'email',
-            'password',
-        ]));
-        
-        // Sign new User in.
-        
-//        \Auth::login();
-//        auth();
-//        \Request::input();
-//          request()->input();        
-        
-        auth()->login($user);
-        
-        \Mail::to($user)->send(new Welcome($user));
-                
+    public function store(RegistrationForm $request) 
+    {   
+              
         // Redirect to the home page.
         return redirect()->home();  // redirect('/);
         
