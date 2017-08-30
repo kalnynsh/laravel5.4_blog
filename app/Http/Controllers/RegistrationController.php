@@ -20,9 +20,10 @@ class RegistrationController extends Controller
         
     }
 
-    public function store(RegistrationForm $request) 
+    public function store(RegistrationForm $form) 
     {   
-              
+        $form->persist();
+        
         // Redirect to the home page.
         return redirect()->home();  // redirect('/);
         
