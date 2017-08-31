@@ -21,11 +21,15 @@
 
     <body>        
 
-        @include ('layouts.nav') 
+        @include ('layouts.nav')
         
-        <div class="alert alert-success" role="alert">
-            Dummy message
-        </div>
+        @if ($flash = session('message'))
+        
+            <div id="flash-message" class="alert alert-success" role="alert">
+                {{ $flash }}
+            </div>
+        
+        @endif
         
         @include ('layouts.header') 
         
