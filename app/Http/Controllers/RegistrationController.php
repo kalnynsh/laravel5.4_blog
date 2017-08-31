@@ -18,6 +18,8 @@ class RegistrationController extends Controller
     {   
         $form->persist();
         
+        session('message', 'Here is default message');
+        
         // Redirect to the home page.
         return redirect()->home();  // redirect('/);
         
