@@ -19,17 +19,13 @@ class PostsController extends Controller
     
     public function index(Posts $posts) { 
         
-//        $posts = (new \App\Repositories\Posts)->all();
-        
-//        dd($posts);  Check of building all dependenses Post $posts, Redis $redis
-        
-        $posts = $posts->all();
+//        $posts = $posts->all();
          
-//        $posts = Post::latest()
-//                
-//                ->filter(request(['month', 'year']))
-//                
-//                ->get();        
+        $posts = Post::latest()
+                
+                ->filter(request(['month', 'year']))
+                
+                ->get();        
         
         return view('posts.index', compact('posts'));
     }
