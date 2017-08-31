@@ -23,6 +23,10 @@
 
         @include ('layouts.nav') 
         
+        <div class="alert alert-success" role="alert">
+            Dummy message
+        </div>
+        
         @include ('layouts.header') 
         
         <div class="container">
