@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 
 use App\Comment;
 
+use App\Tag;
+
 
 class Post extends Model
 {
@@ -65,6 +67,13 @@ class Post extends Model
                 ->get()
                 
                 ->toArray();
+        
+    }
+    
+    public function tags() 
+    {
+        
+        $this->belongsToMany(Tag::class);
         
     }
 }
