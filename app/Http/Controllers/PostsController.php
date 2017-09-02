@@ -8,6 +8,8 @@ use App\Post;
 
 use App\Repositories\Posts;
 
+use App\Tag;
+
 
 class PostsController extends Controller
 {
@@ -17,7 +19,7 @@ class PostsController extends Controller
     }
     
     
-    public function index(Posts $posts) { 
+    public function index(Tag $tag = null) { 
         
 //        $posts = $posts->all();
          
