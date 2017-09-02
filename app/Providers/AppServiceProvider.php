@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
         
           $view->with('archives', \App\Post::archives());
           
-          $view->with('tags', \App\Tag::pluck('name'));
+          $view->with('tags', \App\Tag::has('posts')->pluck('name'));
             
         });
     }
