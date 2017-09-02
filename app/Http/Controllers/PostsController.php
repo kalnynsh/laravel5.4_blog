@@ -6,9 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Post;
 
-use App\Repositories\Posts;
-
-use App\Tag;
+use App\Repositories\Post
 
 
 class PostsController extends Controller
@@ -19,7 +17,7 @@ class PostsController extends Controller
     }
     
     
-    public function index(Tag $tag = null) { 
+    public function index() { 
         
 //        $posts = $posts->all();
          
@@ -27,8 +25,8 @@ class PostsController extends Controller
                 
                 ->filter(request(['month', 'year']))
                 
-                ->get();        
-        
+                ->get();              
+     
         return view('posts.index', compact('posts'));
     }
     
