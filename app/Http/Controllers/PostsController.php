@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Post;
 
-use App\Repositories\Post
+use App\Repositories\Post;
 
 
 class PostsController extends Controller
