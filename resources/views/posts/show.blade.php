@@ -12,7 +12,9 @@
             @foreach ($post->tags as $tag)
             
             <li>
-                {{ $tag->name }}
+                <a href="/posts/tags/{{ $tag->name }}"> 
+                    {{ $tag->name }}
+                </a>
             </li>
             
             @endforeach
