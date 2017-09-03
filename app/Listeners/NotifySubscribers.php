@@ -25,7 +25,9 @@ class NotifySubscribers
      * @return void
      */
     public function handle(ThreadCreated $event)
-    {
-        //
+    {   // Example:
+        // $event->thread->subscribers->forEach(function ($subscriber){..}));
+        
+        var_dump($event->thread['name'] . ' was published to the forum.');
     }
 }
