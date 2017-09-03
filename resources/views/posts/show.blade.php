@@ -6,6 +6,21 @@
 
         <h1>{{ $post->title }}</h1>
         
+        @if (count($post->tags))
+        
+        <ul>
+            @foreach ($post->tags as $tag)
+            
+            <li>
+                {{ $tag->name }}
+            </li>
+            
+            @endforeach
+            
+        </ul>
+            
+        @endif
+        
         <p>
             {{ $post->body }}
         </p>
