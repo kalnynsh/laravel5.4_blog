@@ -26,6 +26,6 @@ class CheckForSpam
      */
     public function handle(ThreadCreated $event)
     {
-        //
+        var_dump('Checking for spam');
     }
 }
